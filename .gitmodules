@@ -1,0 +1,4 @@
+[submodule "plugins/catppuccin/tmux"]
+	path = plugins/catppuccin/tmux
+	url = https://github.com/catppuccin/tmux.git
+	branch = v2.1.2
