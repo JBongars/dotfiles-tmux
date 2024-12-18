@@ -21,3 +21,7 @@ tmux bind v split-window -h
 tmux bind s split-window -v
 
 tmux bind q kill-pane
+
+# copy mode
+tmux bind / copy-mode
+tmux bind -T copy-mode-vi Escape send-keys -X cancel
