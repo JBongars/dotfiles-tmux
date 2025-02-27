@@ -23,4 +23,5 @@ bind-key -T copy-mode-vi 'C-w C-h' select-pane -L
 bind-key -T copy-mode-vi 'C-w C-j' select-pane -D
 bind-key -T copy-mode-vi 'C-w C-k' select-pane -U
 bind-key -T copy-mode-vi 'C-w C-l' select-pane -R
-bind-key -T copy-mode-vi 'C-w C-\' select-pane -l
+
+bind-key -n 'C-w x' if-shell "$is_vim" 'send-keys C-w x' 'swap-window -t +1'

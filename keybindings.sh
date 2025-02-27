@@ -26,3 +26,7 @@ tmux bind Q kill-window
 # copy mode
 tmux bind / copy-mode
 tmux bind -T copy-mode-vi Escape send-keys -X cancel
+
+# window manager
+tmux bind c c new-window
+tmux bind c o move-window -r
