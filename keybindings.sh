@@ -14,7 +14,7 @@ tmux bind -r L resize-pane -R 5
 # vim-style copy mode
 tmux set-window-option -g mode-keys vi
 tmux bind -T copy-mode-vi v send -X begin-selection
-tmux bind -T copy-mode-vi y send -X copy-selection-and-cancel
+tmux bind -T copy-mode-vi y send -X copy-selection
 tmux bind -T copy-mode-vi r send -X rectangle-toggle
 
 tmux bind v split-window -h
