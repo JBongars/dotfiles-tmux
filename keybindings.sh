@@ -23,10 +23,22 @@ tmux bind s split-window -v
 tmux bind q kill-pane
 tmux bind Q kill-window
 
+# choese session
+# binding is prefix+f by default, this is not needed
+# tmux bind g choose-session
+# tmux bind f choose-tree -sZ
+#
+# guide
+# +f find/select sessios
+# +, rename current session
+# +f x kill highlighted session
+# +f , rename highlighted session
+# +f +/- fold/unfold highlighted session
+# +f t tag/untag highlighted session
+
+# new session
+tmux bind-key C command-prompt -p "Session name:" "new-session -s \"%%\""
+
 # copy mode
 tmux bind / copy-mode
 tmux bind -T copy-mode-vi Escape send-keys -X cancel
-
-# window manager
-tmux bind c c new-window
-tmux bind c o move-window -r
