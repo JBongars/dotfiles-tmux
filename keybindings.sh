@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+TMUX_CONFIG="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # vim-style key bindings
 tmux bind h select-pane -L
 tmux bind j select-pane -D
@@ -35,6 +37,9 @@ tmux bind Q kill-window
 # +f , rename highlighted session
 # +f +/- fold/unfold highlighted session
 # +f t tag/untag highlighted session
+
+# vim copy tmux buffer
+tmux bind-key '[' run-shell "$TMUX_CONFIG/scripts/vim-copy-mode.sh"
 
 # new session
 tmux bind-key C command-prompt -p "Session name:" "new-session -s \"%%\""
