@@ -26,8 +26,7 @@ tmux bind q kill-pane
 tmux bind Q kill-window
 
 # choese session
-# binding is prefix+f by default, this is not needed
-# tmux bind g choose-session
+tmux bind g choose-session
 # tmux bind f choose-tree -sZ
 #
 # guide
