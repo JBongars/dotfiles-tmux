@@ -19,8 +19,8 @@ tmux bind -T copy-mode-vi v send -X begin-selection
 tmux bind -T copy-mode-vi y send -X copy-selection
 tmux bind -T copy-mode-vi r send -X rectangle-toggle
 
-tmux bind v split-window -h
-tmux bind s split-window -v
+tmux bind v split-window -v -c "#{pane_current_path}"
+tmux bind s split-window -h -c "#{pane_current_path}"
 
 tmux bind q kill-pane
 tmux bind Q kill-window
@@ -44,5 +44,12 @@ tmux bind-key '[' run-shell "$TMUX_CONFIG/scripts/vim-copy-mode.sh"
 tmux bind-key C command-prompt -p "Session name:" "new-session -s \"%%\""
 
 # copy mode
-tmux bind / copy-mode
+# tmux bind / copy-mode
 tmux bind -T copy-mode-vi Escape send-keys -X cancel
+<<<<<<< Updated upstream
+=======
+
+# window manager
+tmux bind c c new-window -c '#{pane_current_path}'
+tmux bind c o move-window -r
+>>>>>>> Stashed changes
