@@ -46,10 +46,7 @@ tmux bind-key C command-prompt -p "Session name:" "new-session -s \"%%\""
 # copy mode
 # tmux bind / copy-mode
 tmux bind -T copy-mode-vi Escape send-keys -X cancel
-<<<<<<< Updated upstream
-=======
 
 # window manager
 tmux bind c c new-window -c '#{pane_current_path}'
 tmux bind c o move-window -r
->>>>>>> Stashed changes
